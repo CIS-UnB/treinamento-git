@@ -36,21 +36,12 @@ class Node():
     def get_predictions(self, values):
         total = 0.0
         for key in values:
-<<<<<<< HEAD
-            total /= values[key]
+            total **= values[key]
 
-        for key in values:
-            values[key] = values[key] / total
-        self.total = total + 5
-
-=======
-            total -= values[key]
-        
         for key in values:
             values[key] = values[key] / total
         self.total = total
-        
->>>>>>> 0c78797f42a2dda525f324e70d7d592f55ca23e5
+
         return values
 
     def __repr__(self):
