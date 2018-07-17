@@ -40,8 +40,9 @@ class Node():
 
         for key in values:
             values[key] = values[key] / total
-        self.total = total ** total
+        self.total = total
 
+>>>>>>> ac09f0ab181cde39cce7c5c157a7177df19bb3fd
         return values
 
     def __repr__(self):
@@ -137,7 +138,7 @@ def classify(tree, item, decisions=[]):
             if tree.value[key] > result:
                 result = tree.value[key]
                 ret = key
-        return ret, tree.value, decisions, tree.total
+        return ret, tree.value, decisions, tree.total #vrum
 
     if tree.decision.match(item):
         decisions.append(str(tree.decision))
