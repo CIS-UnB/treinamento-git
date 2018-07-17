@@ -142,7 +142,7 @@ def classify(tree, item, decisions=[]):
             if tree.value[key] > result:
                 result = tree.value[key]
                 ret = key
-        return ret, tree.value, decisions, tree.total
+        return ret, tree.value, decisions, tree.total #vrum
 
     if tree.decision.match(item):
         decisions.append(str(tree.decision))
