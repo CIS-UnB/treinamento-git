@@ -36,12 +36,12 @@ class Node():
     def get_predictions(self, values):
         total = 0.0
         for key in values:
-            total *= values[key]
-        
+            total /= values[key]
+
         for key in values:
             values[key] = values[key] / total
-        self.total = total + 1
-        
+        self.total = total + 5
+
         return values
 
     def __repr__(self):
@@ -56,7 +56,7 @@ class Node():
                 spacing = '    ' * self.index,
                 value = repr(self.value),
                 total_items = self.total,
-        ) 
+        )
 
 class Decision():
     def __init__(self, feature_index, value):
@@ -92,7 +92,7 @@ def get_gini_index(rows):
     for class_ in count:
         probability = count[class_] * 1.0 / len(rows)
         impurity -= probability ** 2
-    return impurity    
+    return impurity
 
 def info_gain(false_rows, true_rows, current_uncertainty):
     p = len(false_rows) * 1.0 / (len(false_rows) + len(true_rows))
@@ -109,14 +109,14 @@ def separate(rows, decision):
     return false_rows, true_rows
 
 def get_best_decision(rows):
-    best_gain = 0  
+    best_gain = 0
     best_decision = None
     current_uncertainty = get_gini_index(rows)
-    n_features = len(rows[0]) - 1  
+    n_features = len(rows[0]) - 1
 
-    for col in range(n_features): 
+    for col in range(n_features):
         values = set([row[col] for row in rows])
-        for val in values: 
+        for val in values:
             decision = Decision(col, val)
             false_rows, true_rows = separate(rows, decision)
 
@@ -209,4 +209,3 @@ if __name__ == '__main__':
     std = np.std(results)
 
     print 'RESULTS: {:.4f} <> {:0.2}'.format(mean, std)
-    
