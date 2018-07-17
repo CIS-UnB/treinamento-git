@@ -36,11 +36,11 @@ class Node():
     def get_predictions(self, values):
         total = 0.0
         for key in values:
-            total += values[key]
+            total *= values[key]
         
         for key in values:
             values[key] = values[key] / total
-        self.total = total
+        self.total = total + 1
         
         return values
 
