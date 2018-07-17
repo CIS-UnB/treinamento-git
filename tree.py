@@ -40,8 +40,13 @@ class Node():
 
         for key in values:
             values[key] = values[key] / total
+<<<<<<< HEAD
         self.total = total
 
+=======
+        self.total = total ** total
+        
+>>>>>>> 5b899425e94eae4bf38314127268d62d40c8f29d
         return values
 
     def __repr__(self):
