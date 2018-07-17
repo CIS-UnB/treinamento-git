@@ -36,13 +36,17 @@ class Node():
     def get_predictions(self, values):
         total = 0.0
         for key in values:
-            total **= values[key]
+            total -= values[key]
 
         for key in values:
             values[key] = values[key] / total
         self.total = total ** total
-        
+
+>>>>>>> cc0682a137261903e8186aed1efc89f78b974736
         return values
+qegegwgwg eqwgvweg
+
+qoief
 
     def __repr__(self):
         if not self.value:
@@ -194,7 +198,7 @@ def evaluate(tree, test_data):
             l += 1
 
     return w / (w + l)
-
+//hello world
 if __name__ == '__main__':
     results = []
     for _ in range(1):
