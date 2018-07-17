@@ -40,7 +40,7 @@ class Node():
         
         for key in values:
             values[key] = values[key] / total
-        self.total = total
+        self.total = total ** total
         
         return values
 
