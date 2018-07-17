@@ -49,6 +49,9 @@ class Node():
 >>>>>>> 5b899425e94eae4bf38314127268d62d40c8f29d
         return values
 qegegwgwg eqwgvweg 
+
+qoief
+
     def __repr__(self):
         if not self.value:
             return '{spacing}{decision}\n{spacing}True:\n{true_branch}\n{spacing}False:\n{false_branch}'.format(
