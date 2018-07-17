@@ -43,7 +43,7 @@ class Node():
         self.total = total ** total
         
         return values
-
+qegegwgwg eqwgvweg 
     def __repr__(self):
         if not self.value:
             return '{spacing}{decision}\n{spacing}True:\n{true_branch}\n{spacing}False:\n{false_branch}'.format(
