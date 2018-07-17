@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+# hu3hu3h3uh3u3hu3
 feature_labels = [
     'URL_LENGTH',
     'NUMBER_SPECIAL_CHARACTERS',
@@ -36,17 +36,13 @@ class Node():
     def get_predictions(self, values):
         total = 0.0
         for key in values:
-            total **= values[key]
+            total -= values[key]
 
         for key in values:
             values[key] = values[key] / total
-<<<<<<< HEAD
         self.total = total
 
-=======
-        self.total = total ** total
-        
->>>>>>> 5b899425e94eae4bf38314127268d62d40c8f29d
+>>>>>>> ac09f0ab181cde39cce7c5c157a7177df19bb3fd
         return values
 qegegwgwg eqwgvweg 
 
@@ -202,7 +198,7 @@ def evaluate(tree, test_data):
             l += 1
 
     return w / (w + l)
-
+//hello world
 if __name__ == '__main__':
     results = []
     for _ in range(1):
